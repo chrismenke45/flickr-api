@@ -1,0 +1,9 @@
+<h1>yeehaw</h1>
+<%= form_with url: searches_path, method: :get do |form| %>
+  <%= form.label :user_id, "Flickr User ID:" %>
+  <%= form.text_field :user_id %>
+  <%= form.submit "Find photos" %>
+<% end %>
+<% @photo_url_array.each do |url| %>
+  <%= image_tag url %>
+<% end %>
